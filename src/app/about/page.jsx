@@ -5,7 +5,7 @@ import Button from "@/components/button/Button";
 
 const About = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <div className={styles.imgContainer}>
         <Image
           src="https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -22,7 +22,7 @@ const About = () => {
       </div>
       <div className={styles.textContainer}>
         <div className={styles.item}>
-          <h1 className={styles.title}>Who Are we?</h1>
+          <h1 className={styles.title}>MyWeB은?</h1>
           <p className={styles.desc}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
             quae dolor, optio voluptatibus magnam iure esse tempora beatae. A
@@ -39,7 +39,7 @@ const About = () => {
           </p>
         </div>
         <div className={styles.item}>
-          <h1 className={styles.title}>what we do?</h1>
+          <h1 className={styles.title}>What We Do?</h1>
           <p className={styles.desc}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
             quae dolor, optio voluptatibus magnam iure esse tempora beatae, a
@@ -47,7 +47,11 @@ const About = () => {
             eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit. -
             Creative Illustrations
             <br />
+            <br /> - 포트폴리오
             <br />
+            <br /> - 블로그 기능
+            <br />
+            <br /> - 간편한 제작
           </p>
           <Button url="/contact" text="Contact" />
         </div>
