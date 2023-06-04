@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Hero from "public/hero.png";
+import Button from "@/components/button/Button";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <p className={styles.desc}>
           MyWeB이 제공하는 감각적인 디자인과 다양한 기능
         </p>
-        <button className={styles.button}>작업물 보러가기</button>
+        <Button url="/portfolio" text="작업물 보러가기" />
       </div>
       <div className={styles.item}>
         <Image src={Hero} alt="MyWeB Hero" className={styles.img} />

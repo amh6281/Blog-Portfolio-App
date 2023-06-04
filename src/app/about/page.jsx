@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
+import Button from "@/components/button/Button";
 
 const About = () => {
   return (
@@ -23,20 +24,32 @@ const About = () => {
         <div className={styles.item}>
           <h1 className={styles.title}>Who Are we?</h1>
           <p className={styles.desc}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            omnis minus quos obcaecati reprehenderit aliquid quam rerum. Debitis
-            iure, fuga incidunt voluptatem eaque obcaecati, blanditiis voluptate
-            cupiditate commodi excepturi quaerat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+            quae dolor, optio voluptatibus magnam iure esse tempora beatae. A
+            suscipit eos. Animi quibusdam cum omnis officiis voluptatum quo ea
+            eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ducimus quae dolor, optio voluptatibus magnam iure esse tempora
+            beatae, a suscipit eos. Animi quibusdam cum omnis officiis
+            <br />
+            <br />
+            voluptatum quo ea eveniet? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ducimus quae dolor, optio voluptatibus magnam iure
+            esse tempora beatae, a suscipit eos. Animi quibusdam cum omnis
+            officiis voluptatum quo ea eveniet?
           </p>
         </div>
         <div className={styles.item}>
           <h1 className={styles.title}>what we do?</h1>
           <p className={styles.desc}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            omnis minus quos obcaecati reprehenderit aliquid quam rerum. Debitis
-            iure, fuga incidunt voluptatem eaque obcaecati, blanditiis voluptate
-            cupiditate commodi excepturi quaerat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+            quae dolor, optio voluptatibus magnam iure esse tempora beatae, a
+            suscipit eos. Animi quibusdam cum omnis officiis voluptatum quo ea
+            eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit. -
+            Creative Illustrations
+            <br />
+            <br />
           </p>
+          <Button url="/contact" text="Contact" />
         </div>
       </div>
     </div>
