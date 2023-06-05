@@ -5,7 +5,7 @@ import Button from "@/components/button/Button";
 
 const Contact = () => {
   return (
-    <div className={styles.container}>
+    <div className>
       <h1 className={styles.title}>문의하기</h1>
       <div className={styles.content}>
         <div className={styles.imgContainer}>
