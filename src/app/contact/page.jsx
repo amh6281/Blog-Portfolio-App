@@ -3,6 +3,11 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Button from "@/components/button/Button";
 
+export const metadata = {
+  title: "MyWeB Contact Information",
+  description: "This is MyWeB Contact page",
+};
+
 const Contact = () => {
   return (
     <div className>
