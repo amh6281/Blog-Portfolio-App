@@ -1,5 +1,6 @@
 "use client";
 
+import { useSession } from "next-auth/react";
 import React, { useState, useEffect } from "react";
 import useSwr from "swr";
 
@@ -23,6 +24,8 @@ const Dashboard = () => {
   //   getData();
   // }, []);
 
+  const session = useSession();
+  console.log(session);
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data, error, isLoading } = useSwr(
     "https://jsonplaceholder.typicode.com/posts",
