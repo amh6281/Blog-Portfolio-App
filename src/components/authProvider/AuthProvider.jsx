@@ -8,3 +8,4 @@ const AuthProvider = ({ children }) => {
 };
 
 export default AuthProvider;
+// useSession hook을 사용하기 위한 SessionProvider로 감싸기
