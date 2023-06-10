@@ -3,6 +3,7 @@ import connect from "@/utils/db";
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 import bcrypt from "bcryptjs";
+import CredentialsProvider from "next-auth/providers/credentials";
 
 const handler = NextAuth({
   providers: [
@@ -13,14 +14,16 @@ const handler = NextAuth({
     CredentialsProvider({
       id: "credentials",
       name: "Credentials",
-      async authrize(credentials) {
+      async authorize(credentials) {
+        //Check if the user exists.
         await connect();
 
         try {
-          const user = User.findOne({ email: credentials.email });
+          const user = await User.findOne({
+            email: credentials.email,
+          });
 
           if (user) {
-            // check password
             const isPasswordCorrect = await bcrypt.compare(
               credentials.password,
               user.password
@@ -29,10 +32,10 @@ const handler = NextAuth({
             if (isPasswordCorrect) {
               return user;
             } else {
-              throw new Error("Wrong Credentials");
+              throw new Error("Wrong Credentials!");
             }
           } else {
-            throw new Error("User not found.");
+            throw new Error("User not found!");
           }
         } catch (err) {
           throw new Error(err);
@@ -40,6 +43,9 @@ const handler = NextAuth({
       },
     }),
   ],
+  pages: {
+    error: "/dashboard/login",
+  },
 });
 
 export { handler as GET, handler as POST };
