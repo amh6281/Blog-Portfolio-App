@@ -29,6 +29,10 @@ const Dashboard = () => {
 
   const router = useRouter();
 
+  const { data, error, isLoading } = useSwr(
+    `/api/posts?username=${session?.data?.user.name}`
+  );
+  console.log(data);
   if (session.status === "loading") {
     return <p>Loading...</p>;
   }
@@ -38,7 +42,7 @@ const Dashboard = () => {
   }
 
   if (session.status === "authenticated") {
-    return <div>Dashboard</div>;
+    return <div></div>;
   }
 };
 
