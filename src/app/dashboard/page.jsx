@@ -31,10 +31,13 @@ const Dashboard = () => {
 
   const router = useRouter();
 
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
   const { data, error, isLoading } = useSwr(
-    `/api/posts?username=${session?.data?.user.name}`
+    `/api/posts?username=${session?.data?.user.name}`,
+    fetcher
   );
-  console.log(data);
+
   if (session.status === "loading") {
     return <p>Loading...</p>;
   }
@@ -61,6 +64,8 @@ const Dashboard = () => {
           username: session.data.user.name,
         }),
       });
+      mutate();
+      e.target.reset();
     } catch (err) {
       console.log(err);
     }
@@ -75,7 +80,7 @@ const Dashboard = () => {
             : data?.map((post) => (
                 <div className={styles.post} key={post._id}>
                   <div className={styles.imgContainer}>
-                    <Image src={post.img} alt="" />
+                    <Image src={post.img} alt="" width={200} height={100} />
                   </div>
                   <h2 className={styles.postTitle}>{post.title}</h2>
                   <span className={styles.delete}>X</span>
@@ -83,17 +88,17 @@ const Dashboard = () => {
               ))}
         </div>
         <form className={styles.new} onSubmit={handleSubmit}>
-          <h1>Add New Post</h1>
-          <input type="text" placeholder="Title" className={styles.input} />
-          <input type="text" placeholder="Desc" className={styles.input} />
-          <input type="text" placeholder="Image" className={styles.input} />
+          <h1>게시글 생성</h1>
+          <input type="text" placeholder="제목" className={styles.input} />
+          <input type="text" placeholder="설명" className={styles.input} />
+          <input type="text" placeholder="이미지" className={styles.input} />
           <textarea
-            placeholder="Content"
+            placeholder="내용"
             className={styles.textArea}
             cols="30"
             rows="10"
           />
-          <button className={styles.button}>Send</button>
+          <button className={styles.button}>생성</button>
         </form>
       </div>
     );
