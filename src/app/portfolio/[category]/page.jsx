@@ -24,7 +24,10 @@ const Category = ({ params }) => {
           <div className={styles.content}>
             <h1 className={styles.title}>{item.title}</h1>
             <p className={styles.desc}>{item.desc}</p>
-            <Button text="더보기" url="#" />
+            <Button
+              text="더보기"
+              url={`portfolio/${params.category}/${item.id}`}
+            />
           </div>
           <div className={styles.imgContainer}>
             <Image className={styles.img} fill={true} src={item.image} alt="" />
