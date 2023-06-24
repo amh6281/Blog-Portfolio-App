@@ -5,21 +5,35 @@ import Image from "next/image";
 import { items } from "./data";
 import { notFound } from "next/navigation";
 
-const getData = (cat) => {
-  const data = items[cat];
-  if (data) {
-    return data;
-  }
-  return notFound();
-};
+async function getData() {
+  const res = await fetch("http://localhost:3000/api/portfolios", {
+    cache: "no-store",
+  });
 
-const Category = ({ params }) => {
-  const data = getData(params.category);
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+// const getData = (cat) => {
+//   const data = items[cat];
+//   if (data) {
+//     return data;
+//   }
+//   return notFound();
+// };
+
+const Category = async ({ params }) => {
+  const data = await getData();
+
+  const filterData = data.filter((item) => item.category === params.category);
 
   return (
     <div>
       <h1 className={styles.catTitle}>{params.category}</h1>
-      {data.map((item) => (
+      {filterData.map((item) => (
         <div className={styles.item} key={item.id}>
           <div className={styles.content}>
             <h1 className={styles.title}>{item.title}</h1>
@@ -30,7 +44,7 @@ const Category = ({ params }) => {
             />
           </div>
           <div className={styles.imgContainer}>
-            <Image className={styles.img} fill={true} src={item.image} alt="" />
+            <Image className={styles.img} fill={true} src={item.img} alt="" />
           </div>
         </div>
       ))}
