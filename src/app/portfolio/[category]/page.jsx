@@ -40,7 +40,7 @@ const Category = async ({ params }) => {
             <p className={styles.desc}>{item.desc}</p>
             <Button
               text="더보기"
-              url={`portfolio/${params.category}/${item.id}`}
+              url={`portfolio/${params.category}/${item._id}`}
             />
           </div>
           <div className={styles.imgContainer}>
