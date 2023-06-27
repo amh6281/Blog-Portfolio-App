@@ -36,7 +36,7 @@
 <br />
   <h2>Dashboard page</h2>
 <div>
-  <img src="https://github.com/amh6281/TicToc/assets/83646986/d27518f7-586d-477a-8ce1-33146d814592" /><br />
+  <img src="https://github.com/amh6281/Blog-Portfolio-App/assets/83646986/cb80daac-535d-48c3-8c94-ef88f3756f5f" /><br />
   <b>Dashboard page를 통해 블로그 게시물을 생성하고, 블로그 게시물 Fetching은 SWR을 사용하였습니다.</b>
 </div>
 <br />
