@@ -31,3 +31,13 @@
   border-radius: 5px;
   color: #eee;
 }
+
+.googleBtn {
+  width: 300px;
+  padding: 20px;
+  cursor: pointer;
+  background-color: #53c28b;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+}
