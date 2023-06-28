@@ -45,7 +45,7 @@
 <h2>Register & Login</h2>
 <div>
   <img src="https://github.com/amh6281/Blog-Portfolio-App/assets/83646986/a531920a-c091-4626-81f7-485c6ff597a7" /><br />
-  <b>Next-Auth를 통해 소셜 로그인 및 커스텀 로그인 기능을 구현하였습니다.</b>
+  <b>Next-Auth를 통해 Google 및 Credentials 로그인 기능을 구현하였습니다.</b>
 </div>
 <br />
 <br />
