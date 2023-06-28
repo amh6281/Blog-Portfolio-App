@@ -30,15 +30,22 @@
 <h2>Blog page</h2>
 <div>
   <img src="https://github.com/amh6281/Portfolio-App/assets/83646986/460aa3b0-6d76-4de3-bf70-6dffd2516caf" /><br />
-  <b>cache: "no-store" 옵션을 통해 최신 데이터를 가져오는 Dynamic Data Fetching을 사용하였습니다.</b>
+  <b>> cache: "no-store" 옵션을 통해 최신 데이터를 가져오는 Dynamic Data Fetching을 사용하였습니다.</b><br />
+  <b>> Blog page는 generate Metadata를 통해 Dynamic Metadata 기능을 적용하여 동적 SEO를 구현하였습니다.</b>
 </div>
 <br />
 <br />
-  <h2>Dashboard page</h2>
+<h2>Dashboard page</h2>
 <div>
   <img src="https://github.com/amh6281/Blog-Portfolio-App/assets/83646986/cb80daac-535d-48c3-8c94-ef88f3756f5f" /><br />
   <b>Dashboard page를 통해 블로그 게시물을 생성하고, 블로그 게시물 Fetching은 SWR을 사용하였습니다.</b>
 </div>
 <br />
 <br />
-
+<h2>Register & Login</h2>
+<div>
+  <img src="https://github.com/amh6281/Blog-Portfolio-App/assets/83646986/a531920a-c091-4626-81f7-485c6ff597a7" /><br />
+  <b>Next-Auth를 통해 소셜 로그인 및 커스텀 로그인 기능을 구현하였습니다.</b>
+</div>
+<br />
+<br />
